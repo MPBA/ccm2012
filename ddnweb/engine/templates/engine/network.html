@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+  #container {
+    max-width: 1000px;
+    height: 1000px;
+    margin: auto;
+    border: 1px dotted #000000;
+  }
+</style>
+</head>
+<body>
+ciao
+<div id="container"></div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="{% static 'sigmajs/sigma.min.js' %}"></script>
+<script src="{% static 'sigmajs/plugins/sigma.parsers.json.min.js' %}"></script>
+<script>
+	$.getJSON("{% url 'get_json_network' %}", function(data) {
+		console.log(data);
+		s = new sigma({
+			graph: data,
+			container: 'container',
+			settings: {
+				defaultNodeColor: '#ec5148'
+			}
+		});
+	});
+</script>
+
+
+
+</body>
+</html>
+
