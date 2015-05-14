@@ -28,6 +28,9 @@ STATICFILES_FINDERS = (
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
 )
+
+STATIC_URL = '/static/'
+
 # Application definition
 
 INSTALLED_APPS = (
