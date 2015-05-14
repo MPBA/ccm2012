@@ -1,21 +1,25 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html>
-<head lang="en">
-	<meta charset="UTF-8">
-	<title></title>
+{% block extrahead %}
 	<style type="text/css">
-  #container {
-    max-width: 1000px;
-    height: 1000px;
-    margin: auto;
-    border: 1px dotted #000000;
-  }
-</style>
-</head>
-<body>
-ciao
-<div id="container"></div>
+		#container {
+			max-width: 100%;
+			height: 1000px;
+			margin: auto;
+			border: 1px dotted #000000;
+		}
+	</style>
+{% endblock %}
+{% block extratitle %} Networks {% endblock %}
+{% block container %}
+<div class="row">
+	<div class="col-lg-12">
+	    <div id="container"></div>
+
+	</div>
+</div>
+{% endblock %}
+{% block extrajs %}
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="{% static 'sigmajs/sigma.min.js' %}"></script>
 <script src="{% static 'sigmajs/plugins/sigma.parsers.json.min.js' %}"></script>
@@ -31,9 +35,4 @@ ciao
 		});
 	});
 </script>
-
-
-
-</body>
-</html>
-
+{% endblock %}
