@@ -21,5 +21,5 @@ urlpatterns = [
     url(regex='^$', view=DashboardView.as_view(), name='dashboard'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^engine/', include('engine.urls')),
-
+    url(r'^up/', include('upload.urls')),
 ]

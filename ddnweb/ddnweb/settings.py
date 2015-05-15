@@ -41,7 +41,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'engine',
-    'ddnweb'
+    'ddnweb',
+    'chunked_upload',
+    'upload'
 )
 
 MIDDLEWARE_CLASSES = (

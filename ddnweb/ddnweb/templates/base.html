@@ -59,6 +59,15 @@
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="{% static 'js/ie10-viewport-bug-workaround.js' %}"></script>
+
+    <script src="/static/js/jquery.ui.widget.js"></script>
+    <!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+    <script src="/static/js/jquery.iframe-transport.js"></script>
+    <!-- The basic File Upload plugin -->
+    <script src="/static/js/jquery.fileupload.js"></script>
+    <!-- Calculate md5 -->
+    <script src="/static/js/spark-md5.js"></script>
+
     {% block extrajs %}{% endblock %}
   </body>
 </html>
