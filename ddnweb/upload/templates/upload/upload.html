@@ -50,7 +50,9 @@
         read_next_chunk();
     }
 
-    $("#chunked_upload").fileupload({
+    var chunked_up = $("#chunked_upload");
+    chunked_up.bootstrapFileInput();  //questo gestisce lo stile
+    chunked_up.fileupload({  // questo gestisce l'upload
         url: "{% url 'api_chunked_upload' %}",
         dataType: "json",
         maxChunkSize: 100000, // Chunks of 100 kB
